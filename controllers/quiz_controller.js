@@ -14,6 +14,8 @@ exports.index= function(req,res){
 	})
 };
 
+
+
 //GET/quizes/id
 exports.show = function(req, res){
 	models.Quiz.find(req.params.quizId).then(function(quiz){
@@ -32,3 +34,6 @@ exports.answer = function(req, res){
   })	
 };
 
+exports.author = function(req, res) {
+    res.render('author');
+};
