@@ -10,7 +10,7 @@
     "npm": "1.4.x"
   },
   "devDependencies": {
-    "sqlite3": "~3.0.8"
+    "sqlite3": "~3.0.7"
   },
   "dependencies": {
     "express": "~4.9.0",
@@ -22,8 +22,7 @@
     "ejs": "~0.8.5",
     "express-partials": "~0.3.0",
     "sequelize": "~1.7.10",
-   "pg": "~4.1.1"
+    "pg": "~4.1.1",
+    "sqlite3": "~3.0.8"
   }
 }
- 
- 

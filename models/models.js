@@ -23,18 +23,14 @@ var sequelize = new Sequelize(DB_name, user, pwd,
 		protocol: protocol,
 		port: port,
 		host: host,
-		storage: storage,
-		omitNull: true}
+		storage: storage,	//solo SQlite (.env)
+		omitNull: true	//solo Posrgres
+		}
 	);
 
 // Importar definicion de la tabla Quiz
 
 var quiz_path = path.join(__dirname,'quiz');
-
-		//var sequelize = new Sequelize(null, null, null,
-		//	                   {dialect: "sqlite", storage: "quiz.sqlite"}
-		//	                );
-
 var Quiz = sequelize.import(quiz_path);
 
 exports.Quiz = Quiz;
