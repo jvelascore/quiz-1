@@ -31,9 +31,9 @@ qer='%'+ qer +'%';
 
 
 
-<<<<<<< HEAD
+
 //GET/quizes/id
-=======
+
 
 //GET / quizes
 //exports.index= function(req,res){
@@ -44,7 +44,7 @@ qer='%'+ qer +'%';
 //};
 
 //GET/quizes/:id
->>>>>>> busquedas
+
 exports.show = function(req, res){
    res.render('quizes/show', {quiz: req.quiz, errors: []});
 };
@@ -96,9 +96,6 @@ exports.create = function(req,res){
 };
 
 exports.author = function(req, res) {
-<<<<<<< HEAD
-    res.render('author');
-=======
+
     res.render('author', {errors: []});
->>>>>>> busquedas
 };
