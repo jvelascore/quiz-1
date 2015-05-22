@@ -31,6 +31,11 @@ app.use(methodOverride('_method'));
 
 //Helpers dinamicos:
 app.use(function(req, res, next) {
+     
+    //si no existe lo inicializa
+    if (!req.session.redir) {
+        req.session.redir = '/';
+    }
     //guardar path en session.redir para despues de login
     if (!req.path.match(/\/login|\/logout/)) {
         req.session.redir = req.path;
