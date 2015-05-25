@@ -29,7 +29,7 @@
       </span>
     <%}%>
     
-    <h2> Quiz:<span> El juego de las preguntitasssssss</span> </h2> 
+    <h2> Quiz:<span> El juego de las preguntas</span> </h2> 
   </header> 
 
   <nav class="main" id="n1" role="navigation">
