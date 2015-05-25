@@ -37,18 +37,18 @@ if(req.user){
   options.where = {UserId: req.user.id}
 }
 
-models.Quiz.findAll(options).then(
-  function(quizes)  {
-    res.render('quizes/index.ejs', {quizes: quizes, errors: []});
-  }
-  ).catch(function(error){next(error)});
+//models.Quiz.findAll(options).then(
+//  function(quizes)  {
+ //   res.render('quizes/index.ejs', {quizes: quizes, errors: []});
+ // }
+ // ).catch(function(error){next(error)});
 
 
 
 var qer=( req.query.search||"").replace(/\s/g,'%');
 qer='%'+ qer +'%';
 
-  models.Quiz.findAll({where: ["pregunta like ?", qer], order: [['pregunta','ASC']]}).then(
+  models.Quiz.findAll({where: ["pregunta like ?", qer], order: [['pregunta','ASC']]}, options).then(
      function(quizes){
        res.render('quizes/index.ejs', { quizes: quizes, errors: [], title: 'Quiz'});
      }

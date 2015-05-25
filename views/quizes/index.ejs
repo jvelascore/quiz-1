@@ -18,6 +18,12 @@
   <% } %>
 </table>
 <p/>
+
+<form methods="get">
+     <input type="text" name="search" value=""/>
+     <input type="submit" value="Buscar">
+   </form>
+<p>
 <%if(session.user){%>
   <a href="/quizes/new"><button>Crear pregunta</button></a>
 <%}%>
